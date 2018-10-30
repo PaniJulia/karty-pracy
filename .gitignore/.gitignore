@@ -1,0 +1,104 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int f1(int a, int b){
+    return a*a+b*b;}
+
+int f2(int a, int b){
+    return (a+b)*(a+b);}
+
+bool f3(int c){
+    if(c>=18) return true;
+        else return false;}
+
+double f4(double d){
+    return d/1.23;}
+
+int f5(int e, int f){
+    return e%f;}
+
+bool dzielnik(int n,int D)
+{   if(n%D==0) return true;
+        else return false;
+}
+
+int suma_cyfr(int a)
+{   int wynik=0;
+    do{
+    wynik=wynik+a%10; //3
+    a=a/10;
+    }
+    while(a!=0);
+    return wynik;
+}
+
+
+int main()
+{
+    cout<< "zadanie 1"<<endl<<endl<<endl;
+    int a,b,c,e,f,n,D;
+    double d;
+    cout<< "podaj a: ";
+    cin>>a;
+    cout<<endl;
+    cout<<"podaj b: ";
+    cin>>b;
+    cout<<endl;
+
+    cout<< "suma kwadratow: ";
+    cout<< f1(a,b)<<endl<<endl;
+
+    cout<< "kwadrat sumy: ";
+    cout<< f2(a,b)<<endl<<endl;
+
+    cout<< "czy os jest pelnoletnia: ";
+    cout<<"wpisz wiek: ";
+    cin>>c;
+    if(f3(c)) cout<<"pelnoletni"<<endl<<endl;
+        else cout<<"niepelnoletni"<<endl<<endl;
+
+
+    cout<<"podaj cene brutto: " ;
+    cin>>d;
+    cout<<"cena netto to: ";
+    cout<< f4(d)<<endl<<endl;
+
+    cout<<"reszta z dzielenia: "<<endl;
+    cout<<"podaj e: ";
+    cin>>e;
+    cout<<"podaj f: ";
+    cin>>f;
+    cout<< "reszta z dzielenia to: ";
+    cout<< f5(e,f);
+
+
+    cout<<endl;
+    cout<<endl;
+    cout<<endl;
+
+    cout<< "zadanie 2"<<endl<<endl<<endl;
+    cout<< "podaj n: ";
+    cin>> n;
+    cout<<"podaj d: ";
+    cin>>D;
+    if(dzielnik(n,D)) cout<< "jest dzielnikiem";
+        else cout<<"nie jest dzielnikiem"<<endl;
+
+
+    cout<<endl;
+    cout<<endl;
+    cout<<endl;
+
+    cout<< "zadanie 3"<<endl<<endl<<endl;
+    int x;
+    cout << "Podaj liczbe: "<<endl;
+    cin >> x;
+    cout <<"suma cyfr podanej liczby to: "<< suma_cyfr(x)<<endl;
+    cout<<endl<<endl;
+
+
+
+
+
+    return 0;
+}
